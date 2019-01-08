@@ -2,3 +2,163 @@ body {
   background: #eee;
   font-family: "Nunito SemiBold";
 }
+
+#main h1 {
+  color: #eee;
+  text-align: center;
+}
+
+#main {
+  padding: 32px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.container {
+  height: 150px;
+  text-align: center;  
+}
+
+.link-style {
+  display: flex;
+  padding-top: 10px;
+  padding-right: 50px;
+  justify-content: flex-end;
+}
+
+.link-style a {
+  border: solid 1px white;
+  border-radius: 20px;
+  width: 129px;
+  height: 36px;
+  color: #eee;
+  background-color:#A80E4F;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+}
+
+.link-style a:hover {
+  background-color: #880E4F;
+}
+
+#product-list {
+  padding: 0;
+}
+
+#product-list li {
+  display: inline-block;
+  margin: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #880E4F;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+  cursor: pointer;
+  color: #880E4F;
+  height: 200px;
+  width: 140px;
+}
+
+
+form {
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+}
+
+form input, select {
+  width: 238px;
+}
+
+form .field {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 24px;
+}
+
+form label {
+  text-align: right;
+  padding: 6px;
+}
+
+form select, form input {
+  margin: 4px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+form button {
+  color: #fff;
+  font-size: 2em;
+  background-color: #A80E4F;
+  border: 0;
+  border-radius: 25px;
+  cursor: pointer;
+  bottom: 10px;
+  left: 10px;
+  width: 120px;
+}
+
+.product-name {
+  font-size: 22px;
+  flex-grow: 4;
+  justify-content: center;
+  overflow: auto;
+}
+
+.product-category {
+  font-size: 12px;
+  flex-grow: 4;
+  overflow: auto;
+  justify-content: center;
+}
+
+
+.add-to-cart-btn {
+  flex-grow: 1;
+  background-color: #880E4F;
+  color: #eee;
+  border: 0;
+  border-radius: 25px;
+  width: 100px;
+  height: 32px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:focus {
+  outline: none;
+}
+
+.card-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  height: 100%;
+  
+}
+
+form button:hover {
+  background-color: #880E4F;
+}
+
+#product-details {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: #AD1457;
+  padding: 30px;
+  overflow: auto;
+  box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.header-color {
+  background: #AD1457;
+}

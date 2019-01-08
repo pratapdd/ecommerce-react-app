@@ -4,6 +4,7 @@ const getProductsQuery = gql`
   {
     products {
       name
+      category
       id
     }
   }
