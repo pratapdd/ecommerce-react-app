@@ -4,7 +4,6 @@ import ApolloClient from 'apollo-boost';
 
 
 import './index.css';
-// import App from './App';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
@@ -17,9 +16,6 @@ const client = new ApolloClient({
 
 ReactDOM.render(
     <ApolloProvider client={client}>
-
-<Router history={browserHistory} routes={routes} />
-
-</ApolloProvider>
-
-, document.getElementById('root'));
+        <Router history={browserHistory} routes={routes} />
+    </ApolloProvider>
+    , document.getElementById('root'));

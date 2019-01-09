@@ -16,11 +16,9 @@ class AddProduct extends Component {
 
   displayBrands() {
     let { loading, brands: data } = this.props.getBrandsQuery;
-    console.log('displayBrands-',this.props);
     if (loading) {
       return ( <option disabled>Loading Brands</option> );
     } else {
-      console.log('else-', data);
       if (!data.some(data => data.id === 'defaultBrandId')) {
         data.unshift({ 'id': 'defaultBrandId',
                         'name': 'Select Brand'
@@ -55,11 +53,10 @@ class AddProduct extends Component {
   }
 
   submitForm(e) {
+    // stop default form submit
     e.preventDefault();
-    //First add component and refetch to update the list.
-    
+    // First add component and refetch to update the list.
     if (this.handleValidation()) {
-      console.log('submitForm-', this.state);
       this.props.addProductMutation({
         variables: {
           name: this.state.name,
@@ -77,7 +74,6 @@ class AddProduct extends Component {
   }
 
   render() {
-    console.log('--s-s-s-s--', this.state.brandId);
     return (
       <form id="add-product" onSubmit={ this.submitForm.bind(this) }>
         <span style={{color: "red"}}>{ this.state.errors["name"] }</span>

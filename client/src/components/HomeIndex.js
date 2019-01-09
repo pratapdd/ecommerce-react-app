@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import App from '../components/App';
+import Home from './Home';
 
 export default () => {
   return (
@@ -11,8 +11,7 @@ export default () => {
             Admin Portal
           </Link>
         </div>
-        <App/>
-        
+        <Home/>
       </div>
     );
 }

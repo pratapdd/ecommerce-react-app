@@ -16,12 +16,9 @@ export default () => {
           <div id="main" className="header-color">
             <h1>Admin Customer Interface</h1>
           </div>
-
           <AddProduct />
-
           <ProductList />
         </div>
-
       </div>
     );
 }

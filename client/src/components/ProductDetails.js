@@ -5,7 +5,6 @@ import { getProductQuery } from '../queries/queries';
 class ProductDetails extends Component {
 
   displayProductDetails() {
-    console.log('displayProductDetails-', this.props)
     const { product } = this.props.data;
     if (product) {
       return (
@@ -31,7 +30,6 @@ class ProductDetails extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div id="product-details">
         { this.displayProductDetails() }

@@ -22,8 +22,6 @@ const BrandType = new GraphQLObjectType({
     products: {
       type: new GraphQLList(ProductType),
       resolve(parent, args) {
-        // console.log('BrandType-', parent);
-        // return _.filter(products, { brandId: parent.id })
         return Product.find({ brandId: parent.id });
       }
     }
@@ -39,8 +37,6 @@ const ProductType = new GraphQLObjectType({
     brand: {
       type: BrandType,
       resolve(parent, args) {
-        // console.log('ProductType-', parent)
-        // return _.find(brands, { id: parent.brandId })
         return Brand.findById(parent.brandId);
       }
     }
@@ -55,7 +51,6 @@ const RootQuery = new GraphQLObjectType({
       type: ProductType,
       args: { id: { type: GraphQLID } },
       resolve(parent, args) {
-        // return _.find(products, { id: args.id })
         return Product.findById(args.id);
       }
     },
@@ -63,7 +58,6 @@ const RootQuery = new GraphQLObjectType({
       type: BrandType,
       args: { id: { type: GraphQLID }},
       resolve(parent, args) {
-        // return _.find(brands, { id: args.id })
         return Brand.findById(args.id);
       }
     },
@@ -94,7 +88,6 @@ const Mutation = new GraphQLObjectType({
         category: { type: new GraphQLNonNull(GraphQLString) }
       },
       resolve(parent, args) {
-        console.log('args-', args);
         let brand = new Brand({
           name: args.name,
           category: args.category
@@ -115,7 +108,6 @@ const Mutation = new GraphQLObjectType({
           category: args.category,
           brandId: args.brandId
         });
-        console.log('addProduct-args-', args)
         return product.save();
       }
     }

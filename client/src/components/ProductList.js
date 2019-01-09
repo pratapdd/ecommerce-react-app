@@ -37,7 +37,6 @@ class ProductList extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <ul id="product-list">
