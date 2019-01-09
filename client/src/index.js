@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import ApolloClient from 'apollo-boost';
 
 
-import './index.css';
+import './styles/index.css';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
